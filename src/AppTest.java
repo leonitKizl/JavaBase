@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class AppTest {
 
     public static void main(String[] args) {
@@ -8,5 +11,12 @@ public class AppTest {
         AppIphone spotik = new AppIphone("Spotify");
 //        spotik.appInfo();
         spotik.runIphoneApp();
+        System.out.println("LIST");
+
+        List<App> aps = new ArrayList<>(List.of(maps,spotik));
+        for (App app : aps){
+            app.appInfo();
+
+        }
     }
 }
